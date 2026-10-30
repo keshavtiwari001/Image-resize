@@ -180,7 +180,8 @@ npm start
 
 1. Replace `SITE_URL` in `src/lib/seo.js` with your real domain (affects canonical URLs, sitemap, OG tags).
 2. Replace the default favicon in `src/app/favicon.ico`.
-3. Update the contact email in `src/components/ContactForm.jsx`.
+3. Set `NEXT_PUBLIC_CONTACT_EMAIL` in `.env.local` to your public support address, then rebuild.
+   Until configured, the Contact Us page shows that the contact address is being set up.
 
 ## Google AdSense setup
 

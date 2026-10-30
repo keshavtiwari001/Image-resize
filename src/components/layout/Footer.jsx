@@ -7,6 +7,7 @@ export default function Footer() {
         <div>
           <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-3">Image Lite</h3>
           <p className="text-xs">Fast, local image tools.</p>
+          <Link href="/about" className="inline-block mt-3 text-sm hover:underline">About Us</Link>
         </div>
         <div>
           <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-3 text-sm">Tools</h4>
@@ -19,14 +20,14 @@ export default function Footer() {
         <div>
           <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-3 text-sm">Legal</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/privacy-policy">Privacy</Link></li>
+            <li><Link href="/privacy-policy">Privacy Policy</Link></li>
             <li><Link href="/faq">FAQ</Link></li>
           </ul>
         </div>
         <div>
           <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-3 text-sm">Support</h4>
           <ul className="space-y-2 text-sm">
-            <li><Link href="/contact">Contact</Link></li>
+            <li><Link href="/contact">Contact Us</Link></li>
             <li><Link href="/buy-me-a-coffee">Coffee ☕</Link></li>
           </ul>
         </div>

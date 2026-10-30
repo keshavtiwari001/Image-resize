@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Contact Form</h2>
         <p>
-          The contact form currently opens your own email client with your message pre-filled — the
+          When a contact address is configured, the contact form opens your own email client with your message pre-filled — the
           form data (name, email, message) is sent by you directly via email and is not transmitted
           through our website. If you email us, we receive your name, email address, and message, and
           will use them only to respond to you.

@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import Link from "next/link";
 import { SITE_NAME, SITE_URL } from "@/lib/seo";
 
 export const metadata = {
@@ -31,6 +32,11 @@ export default function ContactPage() {
       </header>
 
       <ContactForm />
+      <section className="space-y-3 text-gray-600 dark:text-gray-400">
+        <h2 className="text-xl font-semibold text-gray-900 dark:text-gray-100">How we can help</h2>
+        <p>Send feedback, suggest a feature, or report a problem. For bug reports, include the tool name, your browser, and the steps that caused the issue.</p>
+        <p>For privacy questions, read our <Link href="/privacy-policy" className="underline">Privacy Policy</Link> or contact us by email once our contact address is available.</p>
+      </section>
     </div>
   );
 }

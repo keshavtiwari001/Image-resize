@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { contactEmail } from "@/lib/contact";
 
 /**
  * Temporary frontend-only contact form.
@@ -32,16 +33,30 @@ export default function ContactForm() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length > 0) return;
+    if (!contactEmail) return;
 
     // Frontend-only approach: open the user's email client.
     const subject = encodeURIComponent(`ImageUtility Contact from ${name}`);
     const body = encodeURIComponent(`${message}\n\n— ${name} (${email})`);
-    window.location.href = `mailto:contact@example.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
     setSent(true);
   };
 
+  if (!contactEmail) {
+    return (
+      <p className="rounded-xl border border-gray-200 bg-gray-50 p-6 text-gray-600 dark:border-gray-800 dark:bg-gray-900 dark:text-gray-400">
+        Our contact email is being set up. Please check back soon for support and feedback enquiries.
+      </p>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <p className="text-sm text-gray-600 dark:text-gray-400">
+        Email us at <a className="underline" href={`mailto:${contactEmail}`}>{contactEmail}</a>, or
+        prepare a message below. This opens your email app; you send the email from there.
+        Please do not include sensitive information or attach private images.
+      </p>
       <div>
         <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
         <input
@@ -82,7 +97,7 @@ export default function ContactForm() {
         type="submit"
         className="px-6 py-2.5 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition"
       >
-        Send Message
+        Open Email App
       </button>
 
       {sent && (

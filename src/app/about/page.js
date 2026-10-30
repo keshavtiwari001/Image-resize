@@ -25,15 +25,16 @@ export default function AboutPage() {
   return (
     <div className="max-w-3xl mx-auto space-y-8 text-gray-700 dark:text-gray-300">
       <header>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">About ImageUtility</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">About Us</h1>
+        <p className="mt-2 text-gray-600 dark:text-gray-400">Simple image tools that work in your browser.</p>
       </header>
 
       <section className="space-y-4">
         <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-100">Who We Are</h2>
         <p>
-          ImageUtility is a free online image tool built by a small team of developers who were tired
-          of upload-based converters that are slow, require accounts, or watermark results. We wanted
-          something simpler — a tool that just works, right in the browser.
+          ImageUtility provides free online tools for converting, compressing, resizing, and editing
+          images. Our aim is to make everyday image tasks accessible without creating an account
+          or uploading your files to a server.
         </p>
       </section>
 
@@ -79,6 +80,10 @@ export default function AboutPage() {
       </section>
 
       <section className="pt-4">
+        <p className="mb-4">
+          Have feedback or need help? Visit our <Link href="/contact" className="text-blue-600 dark:text-blue-400 underline">Contact Us</Link> page.
+          Read our <Link href="/privacy-policy" className="text-blue-600 dark:text-blue-400 underline">Privacy Policy</Link> for details about image processing and advertising.
+        </p>
         <Link href="/" className="text-blue-600 dark:text-blue-400 underline">← Back to Home</Link>
       </section>
     </div>
