@@ -1,0 +1,36 @@
+import ContactForm from "@/components/ContactForm";
+import { SITE_NAME, SITE_URL } from "@/lib/seo";
+
+export const metadata = {
+  title: "Contact Us | ImageUtility",
+  description:
+    "Get in touch with the ImageUtility team. Send feedback, report bugs, or suggest new image features.",
+  alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact ImageUtility",
+    description: "Send feedback, report bugs, or suggest new image features.",
+    url: `${SITE_URL}/contact`,
+    siteName: SITE_NAME,
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Contact ImageUtility",
+    description: "Send feedback or report bugs.",
+  },
+};
+
+export default function ContactPage() {
+  return (
+    <div className="max-w-2xl mx-auto space-y-8">
+      <header>
+        <h1 className="text-3xl font-bold">Contact Us</h1>
+        <p className="text-gray-600 dark:text-gray-400 mt-2">
+          Questions, feedback, or bug reports — we&rsquo;d love to hear from you.
+        </p>
+      </header>
+
+      <ContactForm />
+    </div>
+  );
+}
